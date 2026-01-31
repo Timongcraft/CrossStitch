@@ -1,13 +1,13 @@
 [versions]
-project = "0.1.7"
-java = "21"
-minecraft = "1.21.8"
+project = "0.1.8-SNAPSHOT"
+java = "25"
+minecraft = "26.1-snapshot-5"
 
-fabric_loom="1.11-SNAPSHOT"
-fabric_loader="0.17.2"
+fabric_loom="1.15-SNAPSHOT"
+fabric_loader="0.18.4"
 
 [plugins]
-fabric_loom = { id = "fabric-loom", version.ref = "fabric_loom" }
+fabric_loom = { id = "net.fabricmc.fabric-loom", version.ref = "fabric_loom" }
 
 [libraries]
 minecraft = { module = "com.mojang:minecraft", version.ref = "minecraft" }

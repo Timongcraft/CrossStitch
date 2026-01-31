@@ -8,12 +8,14 @@ import net.minecraft.commands.synchronization.ArgumentTypeInfo;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.resources.ResourceKey;
+import org.jspecify.annotations.NullMarked;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
+@NullMarked
 @Mixin(targets = "net.minecraft.network.protocol.game.ClientboundCommandsPacket$ArgumentNodeStub")
 public class CommandTreeSerializationMixin {
 
@@ -27,7 +29,7 @@ public class CommandTreeSerializationMixin {
     private static <A extends ArgumentType<?>, T extends ArgumentTypeInfo.Template<A>> void writeArgumentNode$wrapInVelocityModArgument(
             FriendlyByteBuf buf, ArgumentTypeInfo<A, T> info, T template, CallbackInfo ci) {
         Optional<ResourceKey<ArgumentTypeInfo<?, ?>>> entry = BuiltInRegistries.COMMAND_ARGUMENT_TYPE.getResourceKey(info)
-                .filter(resourceKey -> !BUILT_IN_REGISTRY_KEYS.contains(resourceKey.location().getNamespace()));
+                .filter(resourceKey -> !BUILT_IN_REGISTRY_KEYS.contains(resourceKey.identifier().getNamespace()));
 
         if (entry.isPresent()) {
             // Not a standard Minecraft argument type - so we need to wrap it

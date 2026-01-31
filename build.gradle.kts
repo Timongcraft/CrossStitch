@@ -8,8 +8,7 @@ version = libs.versions.project.get()
 
 dependencies {
     minecraft(libs.minecraft)
-    mappings(loom.officialMojangMappings())
-    modImplementation(libs.fabric.loader)
+    implementation(libs.fabric.loader)
 }
 
 java {
@@ -28,7 +27,7 @@ tasks.named<ProcessResources>("processResources") {
     val props = mapOf(
         "version" to libs.versions.project.get(),
         "java" to libs.versions.java.get(),
-        "minecraft" to libs.versions.minecraft.get(),
+        "minecraft" to libs.versions.minecraft.get(), //todo: re-add placeholder for release version -> in fabric.mod.json
         "fabric_loader" to libs.versions.fabric.loader.get()
     )
 
