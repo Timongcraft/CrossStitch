@@ -19,7 +19,7 @@
   ],
   "depends": {
     "fabricloader": ">=${fabric_loader}",
-    "minecraft": "~26.1-alpha.5",
+    "minecraft": ">=${minecraft}",
     "java": ">=${java}"
   }
 }
