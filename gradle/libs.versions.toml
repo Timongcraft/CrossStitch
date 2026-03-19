@@ -5,6 +5,8 @@ minecraft = "26.1-pre-2"
 
 fabric_loom="1.15-SNAPSHOT"
 fabric_loader="0.18.4"
+# used for gametests
+fabric_api="0.143.14+26.1"
 
 [plugins]
 fabric_loom = { id = "net.fabricmc.fabric-loom", version.ref = "fabric_loom" }
@@ -12,3 +14,4 @@ fabric_loom = { id = "net.fabricmc.fabric-loom", version.ref = "fabric_loom" }
 [libraries]
 minecraft = { module = "com.mojang:minecraft", version.ref = "minecraft" }
 fabric-loader = { module = "net.fabricmc:fabric-loader", version.ref = "fabric_loader" }
+fabric-api = { module = "net.fabricmc.fabric-api:fabric-api", version.ref = "fabric_api" }

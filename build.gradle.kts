@@ -6,9 +6,20 @@ plugins {
 group = "com.velocitypowered"
 version = libs.versions.project.get()
 
+fabricApi {
+    configureTests {
+        createSourceSet = true
+        modId = "crossstitch-test"
+        enableClientGameTests = false
+        eula = true
+    }
+}
+
 dependencies {
     minecraft(libs.minecraft)
     implementation(libs.fabric.loader)
+
+    "gametestImplementation"(libs.fabric.api)
 }
 
 java {
