@@ -21,6 +21,19 @@ client-side - it's designed to work only with Velocity.
 
 To support Velocity's modern player information forwarding, you need to install and configure [FabricProxy-Lite](https://modrinth.com/mod/fabricproxy-lite)
 
+## Troubleshooting
+
+### Too many known packs
+If you encounter the following issue on Velocity:
+```
+io.netty.handler.codec.CorruptedFrameException: Error decoding class com.velocitypowered.proxy.protocol.packet.config.KnownPacksPacket
+[...]
+Caused by: com.velocitypowered.proxy.util.except.QuietDecoderException: too many known packs
+```
+
+You might want to raise the known packs limit using the [`velocity.max-known-packs`](https://docs.papermc.io/velocity/reference/system-properties/#velocitymax-known-packs) property,
+see the Velocity [docs](https://docs.papermc.io/velocity/reference/system-properties/#how-they-work) for details.
+
 ## Why?
 
 Mojang has been increasing the opportunities that mod developers have to add new content to the game.
