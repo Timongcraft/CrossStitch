@@ -17,7 +17,7 @@
   "mixins": [ "crossstitch.mixins.json" ],
   "depends": {
     "fabricloader": ">=${fabric_loader}",
-    "minecraft": ">=26.1-rc.1",
+    "minecraft": ">=${minecraft}",
     "java": ">=${java}"
   }
 }
