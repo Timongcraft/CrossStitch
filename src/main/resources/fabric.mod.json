@@ -10,7 +10,7 @@
   ],
   "contact": {
     "homepage": "https://papermc.io/software/velocity",
-    "sources": "https://github.com/VelocityPowered/CrossStitch"
+    "sources": "https://github.com/PaperMC/CrossStitch"
   },
   "license": "MIT",
   "environment": "server",
