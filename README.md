@@ -1,4 +1,4 @@
-# CrossStitch
+# CrossStitch [![Discord](https://img.shields.io/discord/289587909051416579.svg?label=&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2)](https://discord.gg/papermc)
 
 CrossStitch is a Minecraft mod designed to improve Minecraft proxy compatibility with other Minecraft mods.
 This mod is supported by the [Velocity](https://papermc.io/software/velocity) team and is developed against Velocity
