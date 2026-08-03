@@ -1,12 +1,12 @@
 [versions]
 project = "0.1.8"
 java = "25"
-minecraft = "26.1"
+minecraft = "26.1.2"
 
-fabric_loom="1.15-SNAPSHOT"
-fabric_loader="0.18.5"
+fabric_loom="1.17-SNAPSHOT"
+fabric_loader="0.19.3"
 # used for gametests
-fabric_api="0.144.1+26.1"
+fabric_api="0.155.2+26.1.2"
 
 [plugins]
 fabric_loom = { id = "net.fabricmc.fabric-loom", version.ref = "fabric_loom" }
